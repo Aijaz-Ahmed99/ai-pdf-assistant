@@ -95,7 +95,7 @@ The backend is powered by FastAPI with PostgreSQL for reliable data storage, whi
 *This project includes Docker support for easy setup and deployment.*
 
 1. **Clone the repository**
-
+   ```
    git clone https://github.com/Aijaz-Ahmed99/ai-pdf-assistant.git
    cd project-folder
    ```
@@ -113,7 +113,8 @@ The backend is powered by FastAPI with PostgreSQL for reliable data storage, whi
    POSTGRES_DB=your_db_name
    POSTGRES_HOST=db
    POSTGRES_PORT=5432
-   DATABASE_URL=postgresql://your_db_user:your_db_password@db:5432/your_db_name```
+   DATABASE_URL=postgresql://your_db_user:your_db_password@db:5432/your_db_name
+   ```
 
    ⚠️*Note:* The .env file is not included in GitHub for security reasons. Each developer must create their own. And give variable names exactly as I have mentioned above
 
