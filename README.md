@@ -1,8 +1,8 @@
-# AI PDF Chat Project Api - Chat with Your PDF
+# AI PDF Assistant - Chat with Your PDF
 
 ## Overview
 
-The PDF AI Query Assistant Project is a FastAPI-powered backend application that enables users to register, log in, and upload PDF documents. Once uploaded, the text content of PDF is extracted and stored. Users can then interact with this content by asking natural language questions, which are answered by a Language Model (LLM) such as Google Gemini. The system maintains persistent data using a PostgreSQL database, and includes JWT-based session management, secure authentication, PDF file validation, and detailed logging. This makes it ideal for searching, querying, and analyzing document content in a conversational way.
+The AI PDF Assistant Project is a FastAPI-powered backend application that enables users to register, log in, and upload PDF documents. Once uploaded, the text content of PDF is extracted and stored. Users can then interact with this content by asking natural language questions, which are answered by a Language Model (LLM) such as Google Gemini. The system maintains persistent data using a PostgreSQL database, and includes JWT-based session management, secure authentication, PDF file validation, and detailed logging. This makes it ideal for searching, querying, and analyzing document content in a conversational way.
 
 ---
 
@@ -75,9 +75,11 @@ project folder/                  # Root project folder
 ├── logs/                        # Logs folder
 │   └── app.log                  # Log file for user actions and errors
 │
+├── .gitignore
+├── docker-compose.dev.yml       # Docker Compose file for local development
+├── docker-compose.prod.yml      # Docker Compose file for production (uses prebuilt images)
 ├── Dockerfile.backend           # Dockerfile for FastAPI backend
 ├── Dockerfile.frontend          # Dockerfile for Streamlit frontend
-├── docker-compose.yml           # Orchestrates backend, frontend, and PostgreSQL
 ├── .dockerignore                # Ignore unnecessary files for Docker builds
 ├── .env                         # Environment variables (secret keys, DB configs, API keys)
 ├── README.md                    # Project documentation
@@ -95,12 +97,13 @@ The backend is powered by FastAPI with PostgreSQL for reliable data storage, whi
 1. **Clone the repository**
 
    git clone https://github.com/Aijaz-Ahmed99/ai-pdf-assistant.git
-   cd <project-folder>
+   cd project-folder
    ```
 2. **Set up environment variables**
    *Create a .env file in the root folder with the following variables (adjust values as needed):*
 
    *Application secrets*
+   ```env
    SECRET_KEY=your_secret_key
    GEMINI_API_KEY=your_google_gemini_api_key
    ALGORITHM=HS256
@@ -111,7 +114,7 @@ The backend is powered by FastAPI with PostgreSQL for reliable data storage, whi
    POSTGRES_DB=your_db_name
    POSTGRES_HOST=db
    POSTGRES_PORT=5432
-   DATABASE_URL=postgresql://your_db_user:your_db_password@db:5432/your_db_name
+   DATABASE_URL=postgresql://your_db_user:your_db_password@db:5432/your_db_name```
 
    ⚠️*Note:* The .env file is not included in GitHub for security reasons. Each developer must create their own. And give variable names exactly as I have mentioned above
 
