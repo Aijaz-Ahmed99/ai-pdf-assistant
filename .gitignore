@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+
+# Environment
+.env
+*.env
+
+# Virtual envs
+venv/
+env/
+.conda/
+
+# Node/React
+node_modules/
+build/
+dist/
+
+# Docker
+*.pid
+*.sock
+.docker/
+
+# IDE/editor
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+logs/*.log
+
